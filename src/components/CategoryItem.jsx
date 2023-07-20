@@ -5,6 +5,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import Grid from "@mui/material/Grid";
+import { Link } from "react-router-dom";
 
 export const CategoryItem = ({ category }) => {
 	return (
@@ -17,7 +18,10 @@ export const CategoryItem = ({ category }) => {
 			sx={{ display: "flex", alignItems: "stretch" }}
 		>
 			<Card sx={{ maxWidth: 345 }}>
-				<CardActionArea>
+				<CardActionArea
+					component={Link}
+					to={`/category/${category.strCategory}`}
+				>
 					<CardMedia
 						component="img"
 						height="160"

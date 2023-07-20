@@ -1,7 +1,6 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { getCategories } from "../API";
-import { CategoriesList } from "../components/CategoriesList";
+import { CategoryList } from "../components/CategoryList";
 
 export const Home = () => {
 	const [categories, setCategories] = useState([]);
@@ -10,9 +9,5 @@ export const Home = () => {
 		getCategories().then((data) => setCategories(data.categories));
 	}, []);
 
-	return (
-		<>
-			<CategoriesList categories={categories} />
-		</>
-	);
+	return <CategoryList categories={categories} />;
 };

@@ -1,9 +1,8 @@
 import React from "react";
-// import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { CategoryItem } from "./CategoryItem";
 
-export const CategoriesList = ({ categories }) => {
+export const CategoryList = ({ categories }) => {
 	return (
 		<Grid container spacing={2} sx={{ padding: 2 }}>
 			{categories.map((category) => (

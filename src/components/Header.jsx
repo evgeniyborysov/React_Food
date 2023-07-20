@@ -13,16 +13,17 @@ export const Header = () => {
 		<Box sx={{ flexGrow: 1 }}>
 			<AppBar position="static">
 				<Toolbar>
-					<Typography
-						variant="h6"
-						noWrap
+					<Box
 						sx={{
+							display: "flex",
+							justifyContent: "flex-start",
 							flexGrow: 1,
-							textAlign: "start",
 						}}
 					>
-						React Food 🍔
-					</Typography>
+						<Button component={Link} to="/" color="inherit">
+							<Typography variant="h6">React Food 🍔</Typography>
+						</Button>
+					</Box>
 
 					<List
 						sx={{
