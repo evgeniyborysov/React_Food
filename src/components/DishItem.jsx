@@ -6,6 +6,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
+import { Link } from "react-router-dom";
 
 export const DishItem = ({ dish }) => {
 	return (
@@ -32,7 +33,13 @@ export const DishItem = ({ dish }) => {
 					</Typography>
 				</CardContent>
 				<CardActions>
-					<Button size="small">view recipe</Button>
+					<Button
+						size="small"
+						component={Link}
+						to={`/recipe/${dish.idMeal}`}
+					>
+						view recipe
+					</Button>
 				</CardActions>
 			</Card>
 		</Grid>

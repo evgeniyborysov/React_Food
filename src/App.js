@@ -7,6 +7,7 @@ import { Contacts } from "./pages/Contacts";
 import { NotFoundPage } from "./pages/404";
 import Container from "@mui/material/Container";
 import { Category } from "./pages/Category";
+import { Recipe } from "./pages/Recipe";
 
 function App() {
 	return (
@@ -16,6 +17,7 @@ function App() {
 				<Routes>
 					<Route index element={<Home />} />
 					<Route path="category/:name" element={<Category />} />
+					<Route path="recipe/:id" element={<Recipe />} />
 					<Route path="about" element={<About />} />
 					<Route path="contacts" element={<Contacts />} />
 					<Route path="*" element={<NotFoundPage />} />

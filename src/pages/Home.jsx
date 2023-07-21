@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { getCategories } from "../API";
 import { CategoryList } from "../components/CategoryList";
+import { Progress } from "../components/Progress";
 
 export const Home = () => {
 	const [categories, setCategories] = useState([]);
@@ -9,5 +10,9 @@ export const Home = () => {
 		getCategories().then((data) => setCategories(data.categories));
 	}, []);
 
-	return <CategoryList categories={categories} />;
+	return categories.length === 0 ? (
+		<Progress />
+	) : (
+		<CategoryList categories={categories} />
+	);
 };
